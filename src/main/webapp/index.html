@@ -36,21 +36,29 @@
 				
 			
 			</ul>
+		</div>
 
 		<table class="table table-bordered">
 			<tr>
-				<td>-</td>
-				<td>-</td>
-				<td>-</td>
+				<td><div class="dropdown open"><div class="sudoku-cell">-</div></div></td>
+				<td>5</td>
+				<td>-<ul class="dropdown-menu" role="menu" aria-labelledby="sudoku-cell-selector"><li><a class="cell-menu-element">6</a> </li></ul></td>
 				<td>-</td>
 				<td>-</td>
 			</tr>
 		</table>
 
-		</div>
-
 	</div>
 
+<div class="dropdown open">
+<div> HER: </div><ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+  <li><a tabindex="-1" href="#">Action</a></li>
+  <li><a tabindex="-1" href="#">Another action</a></li>
+  <li><a tabindex="-1" href="#">Something else here</a></li>
+  <li class="divider"></li>
+  <li><a tabindex="-1" href="#">Separated link</a></li>
+</ul>
+</div>
 	<!-- JavaScript plugins (requires jQuery) -->
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -58,6 +66,7 @@
 
 	<script src="js/angular.js"></script>
 	<script src="js/MainController.js"></script>
+	<script src="js/LocalVisualComponents.js"></script>
 
 </body>
 </html>
