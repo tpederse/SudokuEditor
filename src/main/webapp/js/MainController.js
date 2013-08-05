@@ -1,9 +1,17 @@
 function MainController($scope) {
-
-$scope.cellValue="-"	
 	
-$scope.setValue= function (valueToSet){
-	$scope.cellValue=valueToSet
+$scope.board = {
+		"1-1" : "-"
+};
+
+$scope.cellValue= function (valueName){
+	return $scope.board[valueName];
+}	
+	
+$scope.setValue= function (valueName,valueToSet){
+	$scope.board[valueName] = valueToSet;
 }
+
+
 
 }
