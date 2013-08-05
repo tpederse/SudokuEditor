@@ -1,9 +1,20 @@
 
 $(function () {
 
+$(document).on('click.dropdown.data-api',function (e){
+	$(".dropdown-menu").each(function () {
+		this.remove();
+	})
+	
+})
 
-$(".sudoku-cell").on('click', function (e) {
 
+$(document).on('click',".sudoku-cell" ,function (e) {
+
+	$(".dropdown-menu").each(function () {
+		this.remove();
+	})
+	
 	HTMLToInsert='<ul class="dropdown-menu" role="menu" aria-labelledby="sudoku-cell-selector">'
 			+'</ul>';
 
@@ -36,6 +47,7 @@ $(".sudoku-cell").on('click', function (e) {
 	addValueToLine(9);
 	line.appendTo(popup);
 	popup.appendTo(parent);
+	return false;
 //    addline(1,2,3)
 //    addline(4,5,6)
 //    addline(7,8,9)

@@ -1,7 +1,8 @@
 function MainController($scope) {
 	
 $scope.board = {
-		"1-1" : "-"
+		"1-1" : "-",
+		"1-2" : "-"
 };
 
 $scope.cellValue= function (valueName){
