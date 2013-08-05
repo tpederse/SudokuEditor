@@ -5,19 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Bootstrap -->
 <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/local.css" rel="stylesheet" media="screen">
 </head>
 <body ng-controller="MainController">
 	<div class="container">
 		<h1>Sudoku Editor</h1>
 		<div class="dropdown">
-			<div class="sudoku-cell" data-toggle="dropdown">{{cellValue}} </div>
-			<ul class="dropdown-menu" role="menu" aria-labelledby="sudoku-cell-selector">
-				<li><span ng-click="setValue(1)">1</span><span ng-click="setValue(2)">2</span></li>
-				<li><div>4  5  6</div></li>
+			<div class="sudoku-cell" data-toggle="dropdown">{{cellValue}}</div>
+			<ul class="dropdown-menu" role="menu"
+				aria-labelledby="sudoku-cell-selector">
+				<li>
+					<a class="cell-menu-element" href="#" ng-click="setValue(1)">1</a> 
+					<a class="cell-menu-element" ng-click="setValue(2)">2</a>
+					<a class="cell-menu-element" ng-click="setValue(3)">3</a>
+				</li>
+				<li>
+					<a class="cell-menu-element" href="#" ng-click="setValue(4)">4</a> 
+					<a class="cell-menu-element" ng-click="setValue(5)">5</a>
+					<a class="cell-menu-element" ng-click="setValue(6)">6</a>
+				</li>
+				<li>
+					<a class="cell-menu-element" href="#" ng-click="setValue(7)">7</a> 
+					<a class="cell-menu-element" ng-click="setValue(8)">8</a>
+					<a class="cell-menu-element" ng-click="setValue(9)">9</a>
+				</li>
+				<li>
+					<a class="cell-menu-element-single-line text-center" ng-click="setValue('-')">-</a>
+					
+				</li>
+				
+			
 			</ul>
 
+		<table class="table table-bordered">
+			<tr>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+		</table>
+
 		</div>
-		
+
 	</div>
 
 	<!-- JavaScript plugins (requires jQuery) -->
@@ -26,7 +57,7 @@
 	<script src="js/bootstrap.js"></script>
 
 	<script src="js/angular.js"></script>
-		<script src="js/MainController.js"></script>
+	<script src="js/MainController.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,13 @@
+
+.dropdown-menu > li > a.cell-menu-element {
+ 	
+ 	display: inline;
+}
+
+.dropdown-menu > li > a.cell-menu-element-singleline {
+	
+} 
+
+.dropdown-menu {
+	  min-width: 140px;
+}
