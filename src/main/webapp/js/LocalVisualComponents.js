@@ -24,13 +24,16 @@ $(document).on('click',".sudoku-cell" ,function (e) {
 	
 	bordCoordinate=parent.attr("name");
 	var addValueToLine= function (value){
-		link=$('<a class="cell-menu-element">'+value+'</a>');
+		link=$('<a>'+value+'</a>');
+		if(value !== "-") link.addClass("cell-menu-element")
+		else link.addClass("text-center");
 		//link.addonklick(setSudokuvalue(bordCoordinate,value))
 		link.bind("click",function(e) {
 			sudokuBoardValueChanger(bordCoordinate,value,e.target);
 		});
 		link.appendTo(line);
 	}
+	
 	var line=$("<li></li>")
 	addValueToLine(1);
 	addValueToLine(2);
@@ -46,6 +49,11 @@ $(document).on('click',".sudoku-cell" ,function (e) {
 	addValueToLine(8);
 	addValueToLine(9);
 	line.appendTo(popup);
+	
+	line=$("<li></li>");
+	addValueToLine('-');
+	line.appendTo(popup);
+	
 	popup.appendTo(parent);
 	return false;
 //    addline(1,2,3)

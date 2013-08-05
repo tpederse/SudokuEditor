@@ -1,12 +1,13 @@
 function MainController($scope) {
 	
 $scope.board = {
-		"1-1" : "-",
-		"1-2" : "-"
+		"1-1" : "-"
 };
 
 $scope.cellValue= function (valueName){
-	return $scope.board[valueName];
+	var returnValue = $scope.board[valueName];
+	if(typeof returnValue != 'undefined') return returnValue;
+	return '-';
 }	
 	
 $scope.setValue= function (valueName,valueToSet){
